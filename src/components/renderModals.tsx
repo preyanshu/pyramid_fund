@@ -18,6 +18,7 @@ interface RenderModalsProps {
     goal: number;
   }>>;
   referralsAddr: string[];
+  referralInfo: any;
   contributionData: {
     referralAddress: string;
     amount: number;
@@ -42,6 +43,7 @@ const RenderModals: React.FC<RenderModalsProps> = ({
   modalData,
   setModalData,
   referralsAddr,
+  referralInfo,
   contributionData,
   setContributionData,
   handleCreateCampaign,
@@ -153,18 +155,21 @@ const RenderModals: React.FC<RenderModalsProps> = ({
             <h2 className="text-xl font-bold mb-4">Contribute</h2>
             <div className="flex flex-col gap-4">
               <label>
-                <span className="block mb-1">Referral Address</span>
+                <span className="block mb-1">Referral Address </span>
                 <input
                   type="text"
                   className="w-full p-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring focus:ring-blue-500"
                   value={contributionData.referralAddress}
+                  disabled={referralInfo?.
+                    referrer
+                     ? true : false}
                   onChange={(e) =>
                     setContributionData((prev) => ({
                       ...prev,
                       referralAddress: e.target.value,
                     }))
                   }
-                  placeholder="Enter referral address"
+                  placeholder="Enter referral address (for first time contributers) "
                 />
               </label>
               <label>

@@ -360,13 +360,19 @@ export default function Page(): JSX.Element {
                 {isCreator ? (
                   <button
                     className={`w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg ${
-                      campaign.active ? "bg-slate-800 hover:bg-slate-800" : ""
+                      (campaign.active || Number(campaign.funds_raised)<=0) ? "bg-slate-800 hover:bg-slate-800" : ""
                     }`}
                     onClick={async () => {
                       if (campaign.active) {
                         toast("You cannot withdraw funds from an active campaign.");
                         return;
                       }
+
+                      if (Number(campaign.funds_raised)<=0){
+                        toast("Funds Already Withdrawn");
+                        return;
+                      }
+
                       handleWithdrawFunds(campaign.id);
                     }}
                   >
@@ -415,6 +421,7 @@ export default function Page(): JSX.Element {
   modalData={modalData}
   setModalData={setModalData}
   referralsAddr={referralsAddr}
+  referralInfo={referralInfo}
   contributionData={contributionData}
   setContributionData={setContributionData}
   handleCreateCampaign={handleCreateCampaign}
