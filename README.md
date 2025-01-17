@@ -5,6 +5,14 @@
 
 Welcome to **Pyramid Fund**, the **Pyramid of Faith** that redefines how users contribute and grow together by intertwining belief, growth, and rewards. This isn’t just another platform; it’s a system where every contribution builds a network of trust and rewards. Through our unique referral-based incentive model, users not only support causes but also empower those who introduced them to the platform, fostering a cycle of shared growth and faith.
 
+### Links
+
+-   **Source Code:**  [GitHub Repository](https://github.com/preyanshu/pyramid_fund)
+    
+-   **Smart Contract:**  [Deployed Contract (Xion Testnet)](https://explorer.burnt.com/xion-testnet-1/account/xion1vjypc3d85257apyz7zz2psq5czpujn3kdxqkuzsc2k9qcsfxsfkqwmgs7j)
+    
+-   **Website:**  [Live Demo](https://pyramid-fund.vercel.app/)
+
 
 
 ## How It Works
